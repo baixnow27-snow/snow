@@ -94,7 +94,10 @@ export default async function handler(request, response) {
     });
     const payload = await upstream.json().catch(() => ({}));
     if (!upstream.ok) {
-      const detail = payload?.message ?? payload?.detail ?? `数据服务返回 ${upstream.status}`;
+      const permissionHint = upstream.status === 401 || upstream.status === 403
+        ? "密钥未获授权，请在 TikHub 检查小红书 App 权限"
+        : "";
+      const detail = permissionHint || payload?.message_zh || payload?.message || payload?.detail || `数据服务返回 ${upstream.status}`;
       return response.status(upstream.status).json({ error: `查询失败：${detail}` });
     }
 
