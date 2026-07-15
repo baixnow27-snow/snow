@@ -1,0 +1,11 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "snow",
+  "main": "cloudflare-worker.js",
+  "compatibility_date": "2026-07-15",
+  "assets": {
+    "directory": "./cloudflare-pages",
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application"
+  }
+}
