@@ -1,3 +1,4 @@
+# 小红书关键词搜索看板部署配置
 [build]
   publish = "cloudflare-pages"
   functions = "netlify/functions"
