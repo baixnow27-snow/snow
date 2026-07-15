@@ -1,0 +1,6 @@
+[build]
+  publish = "cloudflare-pages"
+  functions = "netlify/functions"
+
+[functions]
+  node_bundler = "esbuild"
