@@ -35,10 +35,12 @@ export default async (request) => {
     });
     const payload = await upstream.json().catch(() => ({}));
     if (!upstream.ok) {
-      const hint = upstream.status === 401 || upstream.status === 403
-        ? "密钥未获授权，请在 TikHub 检查小红书 App 权限"
-        : payload?.message_zh || payload?.message || `数据服务返回 ${upstream.status}`;
-      return reply({ error: `查询失败：${hint}` }, upstream.status);
+      const providerMessage = payload?.message_zh || payload?.message || payload?.detail || "TikHub 未提供具体原因";
+      return reply({
+        error: `查询失败：${providerMessage}`,
+        providerStatus: upstream.status,
+        providerCode: payload?.code ?? null,
+      }, upstream.status);
     }
     return reply({
       keyword,
