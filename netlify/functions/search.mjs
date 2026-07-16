@@ -8,6 +8,14 @@ const reply = (body, status = 200) => Response.json(body, {
     "x-content-type-options": "nosniff",
   },
 });
+const readableMessage = (value) => {
+  if (typeof value === "string") return value;
+  if (value && typeof value === "object") {
+    return [value.message_zh, value.message, value.detail, value.reason, value.error]
+      .find((item) => typeof item === "string") || JSON.stringify(value);
+  }
+  return "TikHub 未提供具体原因";
+};
 
 export default async (request) => {
   if (request.method !== "GET") return reply({ error: "仅支持 GET 请求" }, 405);
@@ -35,7 +43,7 @@ export default async (request) => {
     });
     const payload = await upstream.json().catch(() => ({}));
     if (!upstream.ok) {
-      const providerMessage = payload?.message_zh || payload?.message || payload?.detail || "TikHub 未提供具体原因";
+      const providerMessage = readableMessage(payload?.message_zh ?? payload?.message ?? payload?.detail ?? payload);
       return reply({
         error: `查询失败：${providerMessage}`,
         providerStatus: upstream.status,
