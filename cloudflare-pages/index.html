@@ -2376,7 +2376,7 @@
       matchType: direct.length ? "直接匹配" : related.length ? "相关领域" : "全站热门",
       topics: selected.map((item, index) => ({
         ...item, rank: index + 1, category: categoryLabels[item.category] || item.category,
-        heat: item.likes, collects: 0, comments: 0, shares: 0
+        heat: item.likes, collects: null, comments: null, shares: null
       }))
     };
   };
@@ -2388,8 +2388,8 @@
       '<td><div class="topic-cell"><strong><a href="' + escapeHtml(topic.url) + '" target="_blank" rel="noreferrer"># ' + escapeHtml(topic.title) + '</a></strong><div><span class="category-tag">' + escapeHtml(topic.category || "搜索结果") + '</span><span>' + escapeHtml(topic.author || data.keyword) + '</span></div></div></td>' +
       '<td><strong>' + formatNumber(topic.heat) + '</strong></td>' +
       '<td><span class="growth positive">赞 ' + formatNumber(topic.likes) + '</span></td>' +
-      '<td>' + formatNumber(topic.collects) + '</td>' +
-      '<td>' + formatNumber(topic.comments) + '</td>' +
+      '<td>' + (topic.collects == null ? '—' : formatNumber(topic.collects)) + '</td>' +
+      '<td>' + (topic.comments == null ? '—' : formatNumber(topic.comments)) + '</td>' +
       '<td><div class="sparkline up"><i style="height:24%"></i><i style="height:31%"></i><i style="height:45%"></i><i style="height:58%"></i><i style="height:72%"></i><i style="height:92%"></i></div></td>' +
       '</tr>').join("");
     const headings = document.querySelectorAll("thead th");
@@ -2440,7 +2440,7 @@
     updatedAt: snapshot.updatedAt,
     source: "snapshot",
     matchType: "热门",
-    topics: snapshot.topics.slice(0, 30).map((item, index) => ({ ...item, rank: index + 1, category: categoryLabels[item.category] || item.category, heat: item.likes, collects: 0, comments: 0, shares: 0 }))
+    topics: snapshot.topics.slice(0, 30).map((item, index) => ({ ...item, rank: index + 1, category: categoryLabels[item.category] || item.category, heat: item.likes, collects: null, comments: null, shares: null }))
   })).catch(() => null);
 
   const exportWrap = document.querySelector(".export-wrap");
