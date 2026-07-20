@@ -1,5 +1,14 @@
 const TIKHUB_ENDPOINT = "https://api.tikhub.io/api/v1/xiaohongshu/app_v2/search_notes";
 
+export function normalizeApiToken(value) {
+  return String(value ?? "")
+    .trim()
+    .replace(/^["']|["']$/g, "")
+    .trim()
+    .replace(/^Bearer\s+/i, "")
+    .trim();
+}
+
 function parseCount(value) {
   if (typeof value === "number" && Number.isFinite(value)) return value;
   const text = String(value ?? "0").trim().replaceAll(",", "");
@@ -186,7 +195,7 @@ export default async function handler(request, response) {
   const keyword = String(request.query?.keyword ?? "").trim().slice(0, 50);
   if (!keyword) return response.status(400).json({ error: "请输入要查询的关键词" });
 
-  const token = process.env.TIKHUB_API_TOKEN;
+  const token = normalizeApiToken(process.env.TIKHUB_API_TOKEN);
   if (!token) {
     return response.status(503).json({ error: "实时数据接口尚未配置，请先在部署平台添加 TIKHUB_API_TOKEN" });
   }
