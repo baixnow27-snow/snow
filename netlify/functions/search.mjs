@@ -1,4 +1,4 @@
-import { aggregateSearchTopics, normalizeTikHubResponse } from "../../api/search.js";
+import { aggregateSearchTopics, normalizeApiToken, normalizeTikHubResponse } from "../../api/search.js";
 
 const ENDPOINT = "https://api.tikhub.io/api/v1/xiaohongshu/app_v2/search_notes";
 const reply = (body, status = 200) => Response.json(body, {
@@ -36,7 +36,7 @@ export default async (request) => {
   const keyword = String(requestUrl.searchParams.get("keyword") ?? "").trim().slice(0, 50);
   const industry = String(requestUrl.searchParams.get("industry") ?? "全部行业").trim().slice(0, 30);
   if (!keyword) return reply({ error: "请输入要查询的关键词" }, 400);
-  const token = process.env.TIKHUB_API_TOKEN;
+  const token = normalizeApiToken(process.env.TIKHUB_API_TOKEN);
   if (!token) return reply({ error: "实时数据接口尚未配置" }, 503);
 
   const sort = ["general", "time_descending", "popularity_descending", "comment_descending", "collect_descending"]
@@ -67,9 +67,10 @@ export default async (request) => {
   try {
     const first = await fetchPage(1);
     if (!first.response.ok) {
-      const hint = first.response.status === 401 || first.response.status === 403
+      const providerDetail = first.payload?.message_zh || first.payload?.message || first.payload?.detail;
+      const hint = providerDetail || (first.response.status === 401 || first.response.status === 403
         ? "密钥未获授权，请在 TikHub 检查小红书 App 权限"
-        : first.payload?.message_zh || first.payload?.message || `数据服务返回 ${first.response.status}`;
+        : `数据服务返回 ${first.response.status}`);
       return reply({ error: `查询失败：${hint}` }, first.response.status);
     }
     const payloads = [first.payload];
