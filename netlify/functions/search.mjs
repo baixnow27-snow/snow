@@ -12,6 +12,18 @@ const reply = (body, status = 200) => Response.json(body, {
   },
 });
 
+const readableMessage = (value) => {
+  if (typeof value === "string") return value;
+  if (value && typeof value === "object") {
+    for (const candidate of [value.message_zh, value.message, value.detail, value.reason, value.error]) {
+      const nested = readableMessage(candidate);
+      if (nested) return nested;
+    }
+    try { return JSON.stringify(value); } catch { return "TikHub 未提供具体原因"; }
+  }
+  return "";
+};
+
 const findNestedValue = (input, keys) => {
   const queue = [input];
   const visited = new Set();
@@ -67,7 +79,7 @@ export default async (request) => {
   try {
     const first = await fetchPage(1);
     if (!first.response.ok) {
-      const providerDetail = first.payload?.message_zh || first.payload?.message || first.payload?.detail;
+      const providerDetail = readableMessage(first.payload);
       const hint = providerDetail || (first.response.status === 401 || first.response.status === 403
         ? "密钥未获授权，请在 TikHub 检查小红书 App 权限"
         : `数据服务返回 ${first.response.status}`);
