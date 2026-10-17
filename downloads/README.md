@@ -1,4 +1,22 @@
-# 新品有数 · PPT 演示资料
+# 新品有数 · 下载中心
+
+## 公开演讲版（新版）
+
+Slogan：**做到产品上市前心理有数**
+
+[下载公开演讲版PPT](https://github.com/baixnow27-snow/snow/raw/refs/heads/demo-downloads-20261017/downloads/xinpin-youshu-public-talk.pptx)
+
+[下载16页主讲PDF](https://github.com/baixnow27-snow/snow/raw/refs/heads/demo-downloads-20261017/downloads/xinpin-youshu-public-talk.pdf)
+
+[下载完整演讲资料包](https://github.com/baixnow27-snow/snow/raw/refs/heads/demo-downloads-20261017/downloads/xinpin-youshu-public-talk-package.zip)
+
+[下载新版封面PNG](https://github.com/baixnow27-snow/snow/raw/refs/heads/demo-downloads-20261017/downloads/xinpin-youshu-public-cover.png)
+
+16:9，16页主讲加2页默认隐藏备份；正文文字和表格可编辑，每页有讲者备注。资料包包含PPT、16页PDF、新版封面及约8分钟逐页演讲稿。PPT约3.3MB，完整包约5.4MB，均小于40MB。
+
+原稿信息已拆为一页一个重点，市场数字等未核实口径保留在隐藏备份与讲稿备忘中；100位付费用户及转介绍率大于10%均标为目标。原始上传文件未改动。
+
+## 此前的首页动效与产品演示素材
 
 下载 `xinpin-youshu-ppt-demo.zip` 后解压即可使用（约 8.3 MB，小于 40 MB）。
 
