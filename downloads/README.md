@@ -19,3 +19,15 @@
 插入现有 PPT：选择“插入 → 视频 → 此设备”，选中 MP4，然后按需设置自动播放、循环播放。
 
 视频展示首页视觉与动画。输入问题、问询和项目切换需使用单独的网页演示。
+
+## 人参案例界面（新增）
+
+[下载三页案例界面PPT](https://github.com/baixnow27-snow/snow/raw/refs/heads/demo-downloads-20261017/downloads/xinpin-youshu-ginseng-case.pptx)
+
+[下载案例界面完整资料包](https://github.com/baixnow27-snow/snow/raw/refs/heads/demo-downloads-20261017/downloads/xinpin-youshu-ginseng-case.zip)
+
+[下载点击体验案例后的第一屏高清图片](https://github.com/baixnow27-snow/snow/raw/refs/heads/demo-downloads-20261017/downloads/xinpin-youshu-ginseng-entry.png)
+
+案例资料包包含：三页16:9截图PPT、案例入口/问询过程/问题小结三张1920×1080高清图片、完整小结长图，以及可在浏览器中打开的完整离线交互HTML。截图从实际点击“体验人参案例”后的界面导出，案例产品为长白山人参精力补充新品。
+
+把图片插入现有PPT，或直接复制案例PPT页面即可展示。真实输入与自动问询使用资料包内HTML网页。
