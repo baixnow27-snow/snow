@@ -1,5 +1,13 @@
 # 新品有数 · 下载中心
 
+## 浅色极简单页（最新）
+
+[下载可编辑单页PPT](https://github.com/baixnow27-snow/snow/raw/refs/heads/demo-downloads-20261017/downloads/xinpin-youshu-light-onepage.pptx)
+
+[下载1920×1080高清图片](https://github.com/baixnow27-snow/snow/raw/refs/heads/demo-downloads-20261017/downloads/xinpin-youshu-light-onepage.png)
+
+根据用户最新截图美化为浅银灰、金属陨石与极简排版。Slogan沿用本次截图“做到产品上市前心里有数”。保留60分、5000元/10万元服务价值关系及原署名，正文文字可编辑。16:9单页，文件均小于40MB。
+
 ## 公开演讲版（新版）
 
 Slogan：**做到产品上市前心理有数**
