@@ -31,3 +31,11 @@
 案例资料包包含：三页16:9截图PPT、案例入口/问询过程/问题小结三张1920×1080高清图片、完整小结长图，以及可在浏览器中打开的完整离线交互HTML。截图从实际点击“体验人参案例”后的界面导出，案例产品为长白山人参精力补充新品。
 
 把图片插入现有PPT，或直接复制案例PPT页面即可展示。真实输入与自动问询使用资料包内HTML网页。
+
+## 16:9 产品封面（新增）
+
+[下载1920×1080封面PNG](https://github.com/baixnow27-snow/snow/raw/refs/heads/demo-downloads-20261017/downloads/xinpin-youshu-cover.png)
+
+[下载单页封面PPT](https://github.com/baixnow27-snow/snow/raw/refs/heads/demo-downloads-20261017/downloads/xinpin-youshu-cover.pptx)
+
+封面沿用陨石背景、银灰黑视觉与纯白悬浮Logo。文案为“新品有数”、“New products measured, innovation in control”和“在投入之前，把新品想清楚。”。可把封面图片插入现有PPT，或复制单页封面PPT。
