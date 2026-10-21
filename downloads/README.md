@@ -65,3 +65,11 @@ Slogan：**做到产品上市前心理有数**
 [下载单页封面PPT](https://github.com/baixnow27-snow/snow/raw/refs/heads/demo-downloads-20261017/downloads/xinpin-youshu-cover.pptx)
 
 封面沿用陨石背景、银灰黑视觉与纯白悬浮Logo。文案为“新品有数”、“New products measured, innovation in control”和“在投入之前，把新品想清楚。”。可把封面图片插入现有PPT，或复制单页封面PPT。
+
+
+## 2026-10-21 · 问询引擎 v0.3
+
+- [下载独立 HTML 演示（约 2.3 MB）](./xinpin-youshu-engine-v03.html)
+- [下载演示与静态源码 ZIP（约 3.3 MB）](./xinpin-youshu-engine-v03.zip)
+
+保留陨石首页与白色标识，17题分轮问询、阶段路由、逐级引导、提前收口、六段报告、反馈及MD/JSON导出。规则版演示，尚未连接大模型或外部搜索。下载HTML后使用Chrome/Edge打开；ZIP需先解压。
