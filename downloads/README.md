@@ -81,3 +81,14 @@ Slogan：**做到产品上市前心理有数**
 - [下载演示与静态源码 ZIP（约 3.4 MB）](./xinpin-youshu-chat-v04.zip)
 
 保留陨石首页与白色标识；连续聊天、一次一问、历史原位修改补充、品类匹配案例、六段报告，以及题目回看点选反馈。规则版演示，尚未连接大模型或外部搜索。下载HTML后使用Chrome/Edge打开；ZIP需先解压。
+
+
+## 2026-10-22 · 企业与新品开发版 v0.5
+
+- [下载独立 HTML 演示（约 2.5 MB）](./xinpin-youshu-product-v05.html)
+- [下载演示与静态源码 ZIP（约 4.3 MB）](./xinpin-youshu-product-v05.zip)
+
+企业品牌、经营品类、年销售额、渠道与研发条件→本次新品→市场资料→使用者过程→产品设计与样品验证。支持多轮细分追问、具体研发建议、带来源的4P资料和可读报告。报告使用虚构路亚品牌演示；真实搜索尚未接入，不编销量排名。规则版演示，尚未连接大模型或外部搜索。下载HTML后使用Chrome/Edge打开；ZIP需先解压。
+
+- [新手路亚竿开发建议示例 PDF（虚构案例）](./xinpin-youshu-fishing-report-v05.pdf)
+- [开发建议与完整问答 Markdown](./xinpin-youshu-fishing-report-v05.md)
